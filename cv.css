@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Advent Pro','Calibri', 'Sans-serif';
+}
+
+/*! -------------side header styling ----------------------------------- */
+header{
+    padding:20px;
+    width: 360px;
+    height: 100%;
+    background-color: #81B29A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    color:#3D405B;
+}
+.profileIcons a{
+    text-decoration: none;
+}
+.profileIcons i{
+    font-size: 3rem;
+    display: block;
+    margin-top: 20px;
+}
+.profileIcons i:hover{
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce{
+    0%, 20%, 60%, 100%{
+        transform: translateX(0);
+        
+    }
+    40%{
+        transform: translateX(60px);
+    }
+    80%{
+        transform: translateX(30px);
+    }
+}
+
+img{
+    width:167px;
+    height: 230px;
+}
+
+/*! ----------------- main --------------------------------*/
+main{
+    margin-left:400px;
+    padding:40px;
+    height: 2500px;
+}
+
+p{
+    padding-bottom: 10px;
+    overflow-wrap: break-word;
+    font-size: 1.2rem;
+    line-height: 25px;
+    color:#3D405B;
+}
+.mainContainer{
+    padding-left: 30px;
+    padding-right:30px;
+}
+
+.mainContainer h1{
+    margin-top:20px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg,#E07A5F,transparent);
+    font-size: 1.5rem;
+    color:white;
+    animation: reveal both linear;
+    animation-timeline: view();
+    background-repeat:no-repeat;
+    animation-range: entry 50% cover 50%;
+}
+
+h2{
+    margin-top:10px;
+    color:#3D405B;
+}
+h3{
+    margin-top:10px;
+    margin-bottom: 5px;
+    color:#81B29A;
+}
+h4{
+    margin-top:10px;
+    margin-bottom: 5px;  
+    line-height: 22px;
+}
+ul{
+    margin-top:10px;
+    padding:10px;
+}
+li{
+    line-height: 25px;
+    overflow-wrap: break-word;
+}
+
+p, .mainContainer h1, h2, h3, h4, ul, li{
+    animation: fade linear both;
+    /* animation-timeline: scroll(); */
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+@keyframes fade {
+    /* from{
+        opacity:0
+    }
+    to{
+        opacity:1;
+    } */
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        transform: translate();
+    }
+    100%{
+        opacity: 1;
+        transform: translate();
+    }
+}
+
+@keyframes reveal {
+    from{
+        background-position-x: 200% ;
+    }
+    to{
+        background-position-x: 0% ;
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Kode+Mono:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Kode+Mono:wght@400..700&family=Lobster&family=Righteous&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Ju's Webpage</title>
+    <link rel="icon" type="image.png" href="icons/logo.png">
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <ul class="navmenu">
+            <li><a href="index.html"><img src="icons/logo.png" alt="home" id="home"></a>
+            </li>
+            <li class="navDropdown">
+                <a href="about.html" class="dropBTM" target="_self">about</a>
+                <div class="dropdownContent">
+                    <a href="cv.html" target="_blank">CV</a>
+                    <a href="blog/blog.html" target="_blank">blog</a>
+                </div>
+            </li>
+            <li class="navDropdown">
+                <a href="work.html">work</a>
+                <div class="dropdownContent">
+                    <a href="work.html#toolBox" target="_self">skills</a>
+                    <a href="work.html#project" target="_self">projects</a>
+                </div>
+            </li>
+            <li><a href="contact.html" target="_self">contact</a></li>
+            <li><a href="blog/blog.html" target="_blank"><i class="fa-solid fa-pencil"></i>
+                <i class="fa-solid fa-face-grin-tongue-wink"></i></a></li>
+        </ul>
+        
+        <div class="email">
+            <a href="mailto:ju.hong.roche@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope-open-text"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!--welcome-->
+    <div class="welcomeContainer" id="welcome">
+        <form class="color-picker" action="">
+            <fieldset>
+                <legend class="visually-hidden">
+                    Pick a colour scheme
+                </legend>
+                <label for="zen"class="visually-hidden">Zen theme</label>
+                <input type="radio" name="theme" id="zen" checked>
+                <label for="rainbow" class="visually-hidden">Rainbow Theme</label>
+                <input type="radio" name="theme" id="rainbow">
+                <label for="funfair"class="visually-hidden">Funfair theme</label>
+                <input type="radio" name="theme" id="funfair">
+                <label for="mono"class="visually-hidden">Mono theme</label>
+                <input type="radio" name="theme" id="mono">
+                <label for="dark"class="visually-hidden">Dark theme</label>
+                <input type="radio" name="theme" id="dark">
+            </fieldset>
+        </form>
+        <p id="welcomeMsg">Hi! I am Ju.</p>
+        <div class="typeWriterContainer">            
+            <h1><span> a passionate junior developer .</span> </h1>
+        </div>
+        <p id="introduction">&emsp;Based in Southwest London, I have recently graduated from a Software Development Bootcamp and am eager to apply my skills and experience in a role that offers opportunities for personal and professional development. I am committed to making meaningful contributions while continuing to expand my knowledge and expertise in the field.</p>
+        <div class="spanContainer">
+            <span>
+                <a href="https://www.linkedin.com/in/ju-hong-roche-a7538234/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </span>
+            <span>
+                <a href="https://github.com/juhongroche" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </span>
+            <span>
+                <a href="blog.html" target="_blank">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </a>
+            </span>
+            <span>
+                <a href="mailto:ju.hong.roche@gmail.com" target="_blank">
+                    <i class="fa-regular fa-envelope" style="color: var(--first-ic-color);"></i>
+                    <i class="fa-regular fa-envelope-open" style="color: var(--second-ic-color);"></i>
+                </a>
+            </span>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

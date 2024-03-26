@@ -1,0 +1,82 @@
+font: 'Advent Pro', 'Sans-serif'
+
+
+Zen Theme:
+    --font-chocie: 'Advent Pro','Arial','Sans-serif';
+    --nav-bg-color: white;
+    --nav-font-color:#3D405B;
+    --nav-fontHover-color:#E07A5F;
+    --navDropdown-color: #E07A5F;
+    --navDropdownHover-color: #F2CC8F;
+    --navDropdownFontHover-color:black;
+    --first-bg-color: white;
+    --tw-color: black;
+    --color-picker-bg: white;
+    --first-ic-color:#E07A5F;
+    --second-ic-color:#F2CC8F;
+    --first-font-color:#81B29A;
+ 
+
+
+Rainbow theme:
+    --font-chocie: 'Henny Penny', 'system-ui', 'Arial';
+    --nav-bg-color:#008834;
+    --nav-font-color:#EAC435;
+    --nav-fontHover-color:#2E294E;
+    --navDropdown-color: #9400D3;
+    --navDropdownHover-color: #0000FF;
+    --navDropdownFontHover-color:#FF7F00;
+    --first-bg-color:#FF7F00;
+    --tw-color: #0000FF;
+    --color-picker-bg: #CB2C2A;
+    --first-ic-color:#CB2C2A;
+    --second-ic-color:#2E294E;
+    --first-font-color:#EAC435;
+
+
+
+Funfair theme:
+    --font-chocie: 'Henny Penny', 'system-ui', 'Arial';
+    --nav-bg-color:#B686E5;
+    --nav-font-color:rgb(126, 205, 163);
+    --nav-fontHover-color:#FF9B71;
+    --navDropdown-color:#077DDF;
+    --navDropdownHover-color:#FF9B71;
+    --navDropdownFontHover-color:#FFFD82;
+    --first-bg-color: #FFFD82;
+    --tw-color:#F2337B;    
+    --color-picker-bg:#F2337B;
+    --first-ic-color:#077DDF;
+    --second-ic-color:#FF9B71;
+    --first-font-color:#2D3047;
+
+
+Mono theme:
+    --font-chocie: 'Kode Mono', 'monospace', 'Arial';
+    --nav-bg-color:#F8F9FA;
+    --nav-font-color:#495057;
+    --nav-fontHover-color:#ADB5BD;
+    --navDropdown-color:#212529;
+    --navDropdownHover-color:#DEE2E6;
+    --navDropdownFontHover-color:#212529;
+    --first-bg-color: #ADB5BD;
+    --tw-color:#F8F9FA;    
+    --color-picker-bg:#343A40;
+    --first-ic-color:#212529;
+    --second-ic-color:#6C757D;
+    --first-font-color:#DEE2E6;
+
+Dark theme:
+    --font-chocie: 'Righteous', 'sans-serif' 'Arial';
+    --nav-bg-color:#000000;
+    --nav-font-color:#FF1E56;
+    --nav-fontHover-color:#8B9A46;
+    --navDropdown-color:#541212;
+    --navDropdownHover-color:#FF1E56;
+    --navDropdownFontHover-color:#000000;
+    --first-bg-color: #000000;
+    --tw-color:#FFAC41;    
+    --color-picker-bg:#FF1E56;
+    --first-ic-color:#FF1E56;
+    --second-ic-color:#FFAC41;
+    --first-font-color:#8B9A46;

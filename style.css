@@ -1,0 +1,678 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-chocie);
+}
+/*! --------------------Theme switcher styling------------------------------- */
+:root{
+    --font-chocie: 'Advent Pro','Arial','Sans-serif';
+    --nav-bg-color: white;
+    --nav-font-color:#3D405B;
+    --nav-fontHover-color:#E07A5F;
+    --navDropdown-color: #E07A5F;
+    --navDropdownHover-color: #F2CC8F;
+    --navDropdownFontHover-color:black;
+    --first-bg-color: white;
+    --tw-color: black;
+    --color-picker-bg: white;
+    --first-ic-color:#E07A5F;
+    --second-ic-color:#F2CC8F;
+    --first-font-color:#81B29A;
+}
+:root:has(#rainbow:checked){
+    --font-chocie: 'Lobster', 'Arial', 'Helvetica', 'Sans-serif';
+    --nav-bg-color:#008834;
+    --nav-font-color:#EAC435;
+    --nav-fontHover-color:#2E294E;
+    --navDropdown-color: #9400D3;
+    --navDropdownHover-color: #0000FF;
+    --navDropdownFontHover-color:#FF7F00;
+    --first-bg-color:#FF7F00;
+    --tw-color: #0000FF;
+    --color-picker-bg: #CB2C2A;
+    --first-ic-color:#CB2C2A;
+    --second-ic-color:#2E294E;
+    --first-font-color:#EAC435;
+}
+:root:has(#funfair:checked){
+    --font-chocie: 'Henny Penny', 'system-ui', 'Arial';
+    --nav-bg-color:#B686E5;
+    --nav-font-color:rgb(126, 205, 163);
+    --nav-fontHover-color:#FF9B71;
+    --navDropdown-color:#077DDF;
+    --navDropdownHover-color:#FF9B71;
+    --navDropdownFontHover-color:#FFFD82;
+    --first-bg-color: #FFFD82;
+    --tw-color:#F2337B;    
+    --color-picker-bg:#F2337B;
+    --first-ic-color:#077DDF;
+    --second-ic-color:#FF9B71;
+    --first-font-color:#2D3047;
+}
+:root:has(#mono:checked){
+    --font-chocie: 'Kode Mono', 'monospace', 'Arial';
+    --nav-bg-color:#F8F9FA;
+    --nav-font-color:#495057;
+    --nav-fontHover-color:#ADB5BD;
+    --navDropdown-color:#212529;
+    --navDropdownHover-color:#DEE2E6;
+    --navDropdownFontHover-color:#212529;
+    --first-bg-color: #ADB5BD;
+    --tw-color:#F8F9FA;    
+    --color-picker-bg:#343A40;
+    --first-ic-color:#212529;
+    --second-ic-color:#6C757D;
+    --first-font-color:#DEE2E6;
+}
+:root:has(#dark:checked){
+    --font-chocie: 'Righteous', 'sans-serif' 'Arial';
+    --nav-bg-color:#000000;
+    --nav-font-color:#FF1E56;
+    --nav-fontHover-color:#8B9A46;
+    --navDropdown-color:#541212;
+    --navDropdownHover-color:#FF1E56;
+    --navDropdownFontHover-color:#000000;
+    --first-bg-color: #000000;
+    --tw-color:#FFAC41;    
+    --color-picker-bg:#FF1E56;
+    --first-ic-color:#FF1E56;
+    --second-ic-color:#FFAC41;
+    --first-font-color:#8B9A46;
+}
+
+.visually-hidden{
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width:1px;
+}
+.color-picker{
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding:0;
+    margin:0;
+    background-color: transparent;
+    border-radius: 1rem;
+    width:fit-content;
+}
+.color-picker > fieldset{
+    border: 0;
+    display: flex;
+    gap: 1rem;
+    width:fit-content;
+    background: var(--color-picker-bg);
+    padding: 1rem 3rem;
+    margin-inline: auto;
+    border-radius: 1rem;
+}
+.color-picker input[type="radio"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 4px solid var(--radio-color, currentColor);
+    border-radius: 50%;
+    outline-offset: 10px;
+    cursor: pointer;
+}
+.color-picker input[type="radio"]:checked {
+    background-color: var(--radio-color);
+}
+.color-picker input[type="radio"]#zen{
+    --radio-color: #81B29A;
+}
+.color-picker input[type="radio"]#rainbow{
+    --radio-color: #FF7F00;
+}
+.color-picker input[type="radio"]#funfair{
+    --radio-color: #B686E5;
+}
+.color-picker input[type="radio"]#mono{
+    --radio-color: #ADB5BD;
+}
+.color-picker input[type="radio"]#dark{
+    --radio-color: black;
+}
+
+/*! ----------------------- nav bar styling---------------------------------------*/
+.navbar {
+    width: 100%;
+    height: 65px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:var(--nav-bg-color);
+    position: fixed;
+    transition: all .2s ease-in-out;
+}
+
+.navmenu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navmenu li {
+    float: left;
+    list-style: none;
+}
+
+#home{
+    width:auto;
+    height: 1.5rem;
+}
+#home:hover{
+    transform: rotate(360deg);
+    transition: all .3s ease-in-out;
+}
+
+.navbar a {
+    color: var(--nav-font-color);
+    padding: 50px 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--nav-fontHover-color);
+    cursor: pointer;
+}
+
+*>.fa-face-grin-tongue-wink,
+*:hover>.fa-pencil {
+    display: none;
+}
+
+*:hover>.fa-face-grin-tongue-wink {
+    display: inline-block;
+}
+
+/*------------------- navbar dropdown styling------------------------------------*/
+.dropdownContent {
+    display: none;
+    position: absolute;
+    min-width: 60px;
+    background-color: var(--navDropdown-color);
+    margin-top: 10px;
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: none;
+    min-width: 95px;
+    border-radius: 10px;
+}
+
+.dropdownContent a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 16px;
+    color:white;
+}
+
+.navDropdown:hover .dropdownContent {
+    display: block;
+}
+
+.dropdownContent a:hover {
+    background-color: var(--navDropdownHover-color);
+    color: var(--navDropdownFontHover-color);
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+/* -------------------- EMAIL styling -------------------------------------------*/
+*>.fa-envelope-open-text,
+*:hover>.fa-envelope {
+    display: none;
+}
+
+*:hover>.fa-envelope-open-text {
+    display: inline-block;
+}
+
+
+/*! --------------- Welcome(Index) page styling ----------------------------------*/
+.welcomeContainer {
+    background-color: var(--first-bg-color);
+    width: 100%;
+    height: 917px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.welcomeContainer p,
+h1 {
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--first-font-color);
+}
+
+#welcomeMsg {
+    align-content: center;
+    float: left;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+/* ---------------   Type writer ------------------------------------------*/
+.typeWriterContainer{
+    display: flex;
+}
+
+.typeWriterContainer h1 {
+    display: inline-block;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color:var(--tw-color);
+    position:relative;  /* for type writer */
+
+}
+
+.typeWriterContainer h1 span::before,
+.typeWriterContainer h1 span::after{
+    content:"";
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;   
+}
+.typeWriterContainer h1 span::before{
+    background-color: var(--first-bg-color);
+    animation: typewriter 5s steps(40) 1s  alternate infinite;
+    height: 149px;
+}
+.typeWriterContainer h1 span::after{
+    width: 0.150em;
+    height: 100px;
+    background: black;
+    animation: typewriter 5s steps(40) 1s alternate infinite,
+    blink 900ms steps(40)  infinite;
+}
+@keyframes typewriter{
+    to{
+        left:100%;
+    }
+}
+@keyframes blink{
+    to{
+        background: transparent;
+    }
+}
+
+#introduction {
+    text-wrap: balance;
+}
+
+/* ----------------Icons styling (span)---------------------------------------*/
+.spanContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.spanContainer span {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.spanContainer i {
+    font-size: 50px;
+}
+
+
+.fa-linkedin, .fa-github, .fa-pen-to-square{
+    color:var(--first-ic-color)
+}
+.fa-linkedin:hover, .fa-github:hover, .fa-pen-to-square:hover{
+    color: var(--second-ic-color);
+}
+
+
+*>.fa-envelope-open,
+*:hover>.fa-envelope {
+    display: none;
+}
+
+*:hover>.fa-envelope-open {
+    display: inline-block;
+}
+
+/* ------------ Responsive HOME page styling ---------------------------------------*/
+@media(max-width:848px){
+    .typeWriterContainer h1 span { 
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .typeWriterContainer h1 span::after{
+        height: 64px;
+    }
+}
+@media(max-width:752px){
+    .typeWriterContainer h1 span { 
+        font-size: 3.5rem;
+        font-weight: 680;
+    }
+    .typeWriterContainer h1 span::after{
+        height: 56px;
+    }
+}
+@media(max-width:656px){
+    .typeWriterContainer h1 span { 
+        font-size: 3rem;
+        font-weight: 680;
+        color:var(--tw-color);
+    }
+    .typeWriterContainer h1 span::after{
+        height: 48px;
+    }
+}
+@media(max-width:562px){
+    .typeWriterContainer h1 span { 
+        font-size: 2.5rem;
+        font-weight: 680;
+        height: 2.5rem;
+    }
+    .typeWriterContainer h1 span::after{
+        color:var(--tw-color);
+        height: 40px;
+    }
+}
+@media(max-width:469px){
+    .typeWriterContainer h1 span { 
+        font-size: 2rem;
+        font-weight: 680;
+    }
+    .typeWriterContainer h1 span::after{
+        height: 32px;
+    }
+}
+@media(max-width:380px){
+    .typeWriterContainer h1 span { 
+        font-size: 1.5rem;
+        font-weight: 680;
+    }
+    .typeWriterContainer h1 span::after{
+        color:var(--tw-color);
+        height: 24px;
+    }
+}
+
+
+/*! ---------------------about page styling ------------------------*/
+.aboutContainer {
+    background-color: #81B29A;
+    width: 100%;
+    height: 916px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.aboutContents {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.aboutContainer .aboutContents p {
+    width: 800px;
+    font-size: 1.5rem;
+    color:#3D405B;
+}
+
+.aboutContainer .aboutContents h1 {
+    width: 800px;
+    font-size: 3rem;
+    color:#F4F1DE;
+}
+
+.svgImg{
+    width: 400px;
+    height: 800px;
+}
+svg{
+    position: relative;
+    overflow: visible !important;
+}
+#rArm{
+    animation: pull1 4s linear infinite;
+    transform-origin: 30%;
+}
+@keyframes pull1 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+#string{
+    animation: pull2 4s linear infinite;
+    transform-origin: 30%;
+}
+@keyframes pull2 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+#balloon, #tie, #lEye, #mouth, #lIris, #lPupil, #rEye, #rIris,#rPupil,#nose,#mouth{
+    animation: pull3 4s linear infinite;
+    transform-origin: 30%; 
+}
+@keyframes pull3 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+
+
+
+/* --------------- about Icons styling ---------------------------*/
+.aboutBtnContainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bounce_img{
+    height: 80px;
+    width: 80px;
+}
+
+.bounce_img:hover{
+    animation: bounce 1s ease-in-out infinite;
+}
+
+  @keyframes bounce{
+    0%, 20%, 60%, 100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-30px);
+    }
+    80%{
+        transform: translateY(-20px);
+    }
+  }
+
+
+/*! ---------------------work page styling -------------------------- */
+.workContainer {
+    background-color: white;
+    width: 100%;
+    /* height: fit-content; */
+    height: auto;
+    padding: 100px 0;
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: normal;
+    
+}
+.workContainer h1 {
+    font-size: 3.5rem;
+    color:#81B29A;
+    font-weight: 750;
+}
+
+/* ------------ Toolbox(skills) styling -------------------- */
+.toolBoxContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    padding: 55px;
+    align-items: center;
+    min-height: 600px;
+    flex-wrap: wrap;
+}
+
+.toolBoxContainer ul li {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 20px;
+    font-size: 2rem;
+    justify-content: center;
+    gap: 30px;
+}
+
+.toolBoxContainer h5 {
+    text-align: center;
+    color: #E07A5F;
+}
+
+.toolBoxContainer ul li i {
+    font-size: 100px;
+    vertical-align: middle;
+
+}
+
+.toolBoxContainer i:hover {
+    transform: scale(1.1);
+}
+
+.toolBoxContainer ul li img {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.toolBoxContainer img:hover {
+    transform: scale(1.1);
+}
+
+/* ------------- Project styling ------------------------ */
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1250px;
+    min-height: 900px;
+    justify-content: center;
+    padding: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.projectBoxes {
+    display: flex;
+    overflow-wrap: normal;
+    justify-content: center;
+    gap: 30px;
+}
+.workContainer .projectContainer .projectBoxes{
+    flex-wrap: wrap;
+}
+
+.workContainer .projectContainer .projectBoxes div {
+    border: 1px solid #3D405B;
+    height: 300px;
+    width: 200px;
+    box-shadow: 5px 5px 10px 5px #3D405B;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.workContainer .projectContainer .projectBoxes div h2 {
+    text-align: center;
+    color:#E07A5F
+}
+
+.workContainer .projectContainer .projectBoxes div:hover {
+    transform: scale(1.1);
+}
+
+.projectContainer img {
+    height: 272px;
+    width: 200px;
+}
+
+/* ! ---------------Contact Page Styling  ----------------------------*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: #81B29A;
+    font-size: 1.3rem;
+    resize:both   /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #3D405B;
+    color: #F4F1DE;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #81B29A;
+    color:#3D405B;
+}
+
+/* Add a background color and some padding around the form */
+.contactContainer {
+    width: 100%;
+    height: 916px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    border-radius: 5px;
+    background-color: #E07A5F;
+    padding: 20px;
+    padding-right: 50px;
+    max-width: 600px;
+    max-height: 400x;
+    margin: 0 auto;
+    color: white;
+    font-weight: 600;
+}

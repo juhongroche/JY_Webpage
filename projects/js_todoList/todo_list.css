@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #023047;
+}
+
+/*padding?*/
+
+
+.container {
+    min-width: 400px;
+    min-height: 500px;
+    /*background-color: #B4AD99;*/
+    background-color: #023047;
+
+    margin: 80px 100px 80px 100px;
+}
+
+
+
+header {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+header h2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2.5rem;
+    margin: 50px auto 0 auto;
+    padding: 0;
+    color: white;
+    text-shadow: 2px 2px 4px #FB8500;
+}
+
+form {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form .todo-btn {
+    height: 27px;
+    width: 27px;
+    font-size: 13px;
+    border: none;
+    background-color: #FB8500;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form .todo-btn:hover {
+    background-color: #023047;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+    min-height: 400px;
+    /*background-color: #FB8500;*/
+    padding: 5px;
+}
+
+
+.todo-input {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    font-family: "Oswald", sans-serif;
+    height: 27px;
+    font-size: 16px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    color: #023047;
+    padding: 5px;
+    box-shadow: 3px 3px 5px #FB8500;
+    word-break: break-all;
+
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-list {
+    min-width: 50%;
+    list-style: none;
+}
+
+i {
+    pointer-events: none;
+}
+
+.delete-btn {
+    background-color: #023047;
+    color: beige;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: white;
+    color: #023047;
+}
+
+
+.complete-btn {
+    background-color: #FB8500;
+    color: beige;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    margin-left: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.complete-btn:hover {
+    background-color: white;
+    color: #FB8500;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* select styling: not working
+select {
+    appearance: none;
+    outline: none;
+    border: none;
+    background-color: blueviolet;
+    padding-left: 5px;
+}
+
+
+.filter {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: white;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.filter::after {
+    content: "\25BC";
+    position: absolute;
+    background-color: beige;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+}
+*/

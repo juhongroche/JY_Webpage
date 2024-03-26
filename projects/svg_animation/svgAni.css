@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+svg{
+position: relative;
+overflow: visible !important;
+}
+
+
+#rArm{
+    animation: pull1 4s linear infinite;
+    transform-origin: 30%;
+}
+@keyframes pull1 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+#string{
+    animation: pull2 4s linear infinite;
+    transform-origin: 30%;
+}
+@keyframes pull2 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+#balloon, #tie, #lEye, #mouth, #lIris, #lPupil, #rEye, #rIris,#rPupil,#nose,#mouth{
+    animation: pull3 4s linear infinite;
+    transform-origin: 30%; 
+}
+@keyframes pull3 {
+    50%{
+        transform: rotatez(20deg)        
+    }
+}
+
+
+
