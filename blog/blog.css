@@ -153,7 +153,7 @@ header{
     --radio-color: #72c3ef;
 }
 .color-picker input[type="radio"]#party{
-    --radio-color: #ffee00;
+    --radio-color: #f35396;
 }
 .color-picker input[type="radio"]#cafe{
     --radio-color: #A85D30;
@@ -263,27 +263,28 @@ article:hover{
 }  
 
 .photo-container{
-    width: 100%;
+    margin:0;
+    padding:0;
+}
+.photo-wrapper{
     display: flex;
-    justify-content: center;
-    gap:200px;
+    gap:50px;
     padding:30px;
     flex-wrap: wrap;
-    background-color: rgb(104, 103, 61);    
+    background-color: white; 
+    justify-content: center;
 }
 .photos{
     width:250px;
     height:350px;
-    background-color: rgb(177, 134, 3);
+    background-color: transparent;
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0,0%,0%,0.25);
     border-radius: 10px;
     overflow:hidden;
 }
 .photos img{
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
-.photos:hover{
-    overflow: visible;
-    z-index: 1000;
+.photos img:hover{
+    opacity: 0.5;
 }
