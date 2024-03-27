@@ -1,5 +1,6 @@
-font: 'Advent Pro', 'Sans-serif'
+=============================== Main Webpage ====================================
 
+font: 'Advent Pro', 'Sans-serif'
 
 Zen Theme:
     --font-chocie: 'Advent Pro','Arial','Sans-serif';
@@ -16,8 +17,6 @@ Zen Theme:
     --second-ic-color:#F2CC8F;
     --first-font-color:#81B29A;
  
-
-
 Rainbow theme:
     --font-chocie: 'Henny Penny', 'system-ui', 'Arial';
     --nav-bg-color:#008834;
@@ -33,8 +32,6 @@ Rainbow theme:
     --second-ic-color:#2E294E;
     --first-font-color:#EAC435;
 
-
-
 Funfair theme:
     --font-chocie: 'Henny Penny', 'system-ui', 'Arial';
     --nav-bg-color:#B686E5;
@@ -49,7 +46,6 @@ Funfair theme:
     --first-ic-color:#077DDF;
     --second-ic-color:#FF9B71;
     --first-font-color:#2D3047;
-
 
 Mono theme:
     --font-chocie: 'Kode Mono', 'monospace', 'Arial';
@@ -80,3 +76,55 @@ Dark theme:
     --first-ic-color:#FF1E56;
     --second-ic-color:#FFAC41;
     --first-font-color:#8B9A46;
+
+
+=============================== Blog page ====================================
+
+font-family:'Mali','Helvetica','San-serif';
+Forest theme:
+    --hd-bg-color:#ffffff;
+    --hd-font-color:#145c22;
+    --sd-nav-color:#1b8b05;
+    --sd-nav-hover-color:#243630;
+    --nav-bg-color:#ffffff;
+    --nav-span-bg-color:#447011; 
+    --btn-font-color:#cbccbc; 
+    --btn-font-hover-color:#c3a337;
+    --btn-bg-color: #522201;  
+
+Beach theme:
+    --hd-bg-color:#cbe6ea;
+    --hd-font-color:#018abc;
+    --sd-nav-color:#014776;
+    --sd-nav-hover-color:#ddbea7;
+    --nav-bg-color:#01c5ce;
+    --nav-span-bg-color:#42adf8;
+    --btn-font-color:#ece5db;
+    --btn-font-hover-color:#42adf8;
+    --btn-bg-color:#ece5db;
+
+
+
+Party theme:
+    --hd-bg-color:#0a0324;
+    --hd-font-color:#fde334;
+    --sd-nav-color:#fd8a1a;
+    --sd-nav-hover-color:#21d1fd;
+    --nav-bg-color:#021045;
+    --nav-span-bg-color:#f6287d;
+    --btn-font-color:#0a0324;
+    --btn-font-hover-color:#b915cc;
+    --btn-bg-color:#8de41c;
+
+
+
+Cafe theme:
+    --hd-bg-color:#dfb78c;
+    --hd-font-color:#A85D30;
+    --sd-nav-color:#421908;
+    --sd-nav-hover-color:#ffdbaf;
+    --nav-bg-color:#421908;
+    --nav-span-bg-color:#823919;
+    --btn-font-color:#ECCCB4;
+    --btn-font-hover-color:#49281a;
+    --btn-bg-color:#CE8B5C;
